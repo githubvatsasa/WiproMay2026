@@ -56,3 +56,23 @@ Ex
 - article
 - aside
 - nav
+
+# Mergin and padding
+- Mergin:- space outside any element
+- Padding:- space inside any element
+
+# units in CSS
+ - Absolute unit
+ - Relative unit
+# Absolute unit:-
+ - when the size is fixed
+ - px -> each px = 1/92 inch
+ - pt -> each pt = 1/72 inch
+# relative unit:-
+ - when the Unit is calculated as per the screen size
+ - rem -> font size of the root(<html>) is rem
+ - em -> font size of current element
+ - vh -> viewport height
+ - vw -> viewport width
+ - % -> size of the parent element
+
