@@ -76,3 +76,12 @@ Ex
  - vw -> viewport width
  - % -> size of the parent element
 
+# Responsive Design:-
+- creating the UI applications to ba able to open on mobile as well with any information loss
+- to implement we will use colomn drop techniq
+- we needs to make mobile fist applications.
+- use media queries to implement the same in css
+
+
+
+https://imdac.github.io/modules/css/css-rwd-patterns/
