@@ -65,6 +65,28 @@
 - can be returned from a function
 - can be passed from the params
 - lembda functions
+# objects 
+- real time component
 
+# Creating Calculator application
+
+
+
+# classes in JavaScript
+- sugercore on the functions.
+- use class keyword to create a class
+- we can create constructor in classes
+- create menthods and getters and setters
+- the classes can be extended 
+- the functions can be static in classes
+# Sets in JS
+- collection of data
+- has many methods to help us with
+- auto scale the size
+- store only unique data
+# Map is JS
+- Map is a key value collection of the data
+- key has to be unique and value is changable
+ 
 
 
