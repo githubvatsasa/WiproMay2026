@@ -45,7 +45,7 @@ function add(a=10,b =12){
 // console.log("data = ",data(10,12));
 
 let data=add(5,6)
-console.log(data)
+console.log(data(5,6))
 
 // function add(a=10,b=12){
 //     return (a,b)=> {

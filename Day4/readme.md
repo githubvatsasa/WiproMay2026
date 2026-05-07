@@ -41,3 +41,30 @@
     - function scoped
 - const
     - constant at block scope
+
+## Condition statements
+- if
+- if else
+- switch case
+- Ternary
+
+# loops
+- for loop
+- while
+- do while
+- foreach
+# strings :- 
+- same as java
+
+# arrays
+- same as java but can store multiple type of value
+
+# functions
+- first class member of JavaScript
+- function can be used as statement.
+- can be returned from a function
+- can be passed from the params
+- lembda functions
+
+
+
