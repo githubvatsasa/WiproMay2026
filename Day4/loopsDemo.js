@@ -10,5 +10,5 @@ function loopsDemo(){
     do{
         document.getElementById("demo").innerHTML += "<h2>Value of a from do while is: " + a + "</h2>";
         a++;        
-    }while(a<10)
+    }while(a>10)
 }
