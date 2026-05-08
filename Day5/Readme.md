@@ -24,25 +24,7 @@
 - its in the form of key and value
 - data is always in the form of object
 - Ex:-
-Login data for Movie app
- - Login
-    {
-        "users":[
-            {
-                "id":1,
-                "name":"Ram",
-                "password":"ram123"
-            },
-            {
-                "id":2,
-                "name":"Raj",
-                "password":"raj123"
-            }
-        ]
-    }
- - view the movies
-- install Json server :-  "npm install -g json-server"
-- run Json server:- "npx json-server --watch db.json --port 3000"
+
 # API:-
 - set of rules which will allow user to communicate with different application.
 - full form:- Application Programming interface.
@@ -83,3 +65,26 @@ Syn:-
 - Document Object Model
 
 
+# Application 
+## userstories
+1. Login data for Movie app
+ - Login
+    {
+        "users":[
+            {
+                "id":1,
+                "name":"Ram",
+                "password":"ram123"
+            },
+            {
+                "id":2,
+                "name":"Raj",
+                "password":"raj123"
+            }
+        ]
+    }
+ 2. view the movies data from APIs
+ 3. create the user watchlist
+ 
+- install Json server :-  "npm install -g json-server"
+- run Json server:- "npx json-server --watch db.json --port 3000"

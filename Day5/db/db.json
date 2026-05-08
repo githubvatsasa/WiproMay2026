@@ -10,5 +10,17 @@
                 "name":"Raj",
                 "password":"raj123"
             }
+        ],
+        "movies":[
+            {
+                "id":1,
+                "name":"xxx",
+                "img":"xxx.jpg"
+            },
+            {
+                "id":2,
+                "name":"yyy",
+                "img":"yyy.jpg" 
+            }
         ]
     }
