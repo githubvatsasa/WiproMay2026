@@ -4,19 +4,24 @@
       "id": "1",
       "name": "Ram",
       "password": "ram123",
-      "watchList":{}
+      "watchList": [
+        2,
+        1
+      ]
     },
     {
       "id": "2",
       "name": "Raj",
       "password": "raj123",
-      "watchList":{}
+      "watchList": [
+        2
+      ]
     },
     {
       "name": "Amisha",
       "password": "ami",
       "id": "3",
-      "watchList":{}
+      "watchList": []
     }
   ],
   "movies": [
