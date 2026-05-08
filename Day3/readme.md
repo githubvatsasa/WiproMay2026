@@ -82,6 +82,8 @@ Ex
 - we needs to make mobile fist applications.
 - use media queries to implement the same in css
 
+# CDN:-
+Bootstrap:- https://imdac.github.io/modules/css/css-rwd-patterns/
 
 
-https://imdac.github.io/modules/css/css-rwd-patterns/
+

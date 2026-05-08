@@ -13,16 +13,10 @@
 - "Spread" Operator, 
 - Lamda Function, 
 - Classes, 
-- Map & Set Object, 
-- Promises, 
+- Map & Set Object,  
 - "ForEach", 
 - Deafult Parameters, 
 - Javascript Modules, 
-- Asyncronous Java script, 
-- Syncronous Vs Asyncrononous Javascrit, 
-- Call Backs, 
-- Async & Await
-
 # what is JavaScript;
  - The programming language of the Web.
  - can be executed using browser.
