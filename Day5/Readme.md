@@ -75,16 +75,37 @@ Syn:-
                 "id":1,
                 "name":"Ram",
                 "password":"ram123"
+                "watchlist":{1,2}
             },
             {
                 "id":2,
                 "name":"Raj",
                 "password":"raj123"
+                "watchlist":{3,4}
             }
         ]
     }
  2. view the movies data from APIs
  3. create the user watchlist
- 
+
 - install Json server :-  "npm install -g json-server"
 - run Json server:- "npx json-server --watch db.json --port 3000"
+
+## database for watchlist
+
+
+user:[
+  {
+    id:1,
+    watchlist:[
+      {
+        id:1,
+        name:"xx"
+      },
+      {
+        id:2,
+        name:"yy"
+      }}
+    ]
+  }
+]
