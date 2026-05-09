@@ -1,3 +1,4 @@
+// create Alies of type with name CarYear
 type CarYear = number
 type car = {
     year: CarYear

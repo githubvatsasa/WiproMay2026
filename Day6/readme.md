@@ -61,3 +61,12 @@ enum OrderStatus{
     console.log("Delivered = ",OrderStatus.Delivered);
     console.log(OrderStatus[0]);
  console.log(OrderStatus["PendindVal"]);
+
+# Aliases
+- Type Aliases allow defining types with custom names
+# Interface 
+- Similar to Alias
+- can be used to define the type in the application
+
+# Error Handling
+- pre alligned preventive step to makesure there will not be any issue in the code.
