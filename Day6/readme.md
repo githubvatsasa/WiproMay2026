@@ -40,3 +40,24 @@
 
 # to compile 
 - node <filename>.ts
+
+# for Typespecific text
+- to compile tsc <filename>.ts (converting the code in Js type)
+- to run node <filename>.js
+
+# Enum
+- the default value of your 1 data is always "0" as value and increased by 1 till the end
+- if you assigne any number then it will use that numnber as baseline and increse from that number
+- based on the position we can access the key as well
+enum OrderStatus{
+    Pendind,
+    Shipped = 2,
+    Delivered
+}
+     let status = OrderStatus.Pendind
+
+    console.log("Pending = ",OrderStatus.Pendind);
+    console.log("Shipped = ",OrderStatus.Shipped);
+    console.log("Delivered = ",OrderStatus.Delivered);
+    console.log(OrderStatus[0]);
+ console.log(OrderStatus["PendindVal"]);
