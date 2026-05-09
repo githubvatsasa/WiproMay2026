@@ -19,16 +19,24 @@ interface Customer{
     customerName: string,
     isPremium: boolean
 }
+// class
 class Order{
     orderId:string;
     totalAmount : number;
     isPaid : boolean;
+    //Array of Alias
     product:Product[];
+    //Tuple
     deliverLocation:[string,string];
+    //Accessing Enum
     static:OrderStatus;
+    //Union type
     paymentMethod:string | number;
+    // Any
     extraData:any;
+    // Object
     customer:Customer
+
     constructor(
         orderId:string,
         customer:Customer,
@@ -60,7 +68,7 @@ class Order{
         )
     }
 }
-
+// data to Array od Alies
     const productList:Product[] = [
         {
             id:1,
@@ -68,11 +76,13 @@ class Order{
             price:60000
         }
    ]
+   // Data to class Object
    const customer1:Customer = {
         customerId:1,
         customerName:"Ram",
         isPremium:true
    }
+   // Run the Object
 
    const order1 = new Order("O101",customer1,productList);
 //    Order1.printInfo();
