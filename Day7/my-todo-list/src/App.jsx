@@ -13,7 +13,7 @@ function App() {
   return (
     <div> 
         <Header/>
-        <Body title = "Check the code" task = "Code of JS for Wipro needs to be tested"></Body>
+        <Body/>
 
     </div>
    

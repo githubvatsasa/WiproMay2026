@@ -1,21 +1,67 @@
 import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
 import { useState } from 'react'
-function Body({title,task}){
+
+function Body(){
     // SetState Hook
     // First attribute is a variable
     // Second is a Set function
-    const [count,setCount] = useState(0)
-    const handleClick=(name)=>{
-        setCount(count+1)
-        alert(name +" " + count)
-        console.log(name,"-- ", count)
+    // const [title,setTitle] = useState(" ")
+    const[temptitle,setTempTitle] = useState(" ")
+    // const [task,setTask] = useState(" ")
+    const [tempTask,setTempTask] = useState(" ")
+    const[todoMap,setTodoMap] = useState(new Map())
+    const[todo,setTodo]=useState({
+        title:"",
+        task:""
+    })
+    
+    const handleClick=(event)=>{
+        const myMap =  new Map()
+        setTodo({
+            title:temptitle,
+            task:tempTask
+        })
+        setTodoMap(todoMap.size+1,todo)
+        
+        console.log(todoMap);
+        
+        // console.log(myMap);
+        // const todo = new Map({tempTask,temptitle})
+        // setTodoMap(todo)
+        // setTempTask("")
+        // setTempTitle("")
+        
+    }
+    // const handleChangeTitle=(event)=>{
+    //     console.log(event.target.value);
+    //     setTempTitle(event.target.value)
+    // }
+    // const handleChangeTask=(event)=>{
+    //     setTempTask(event.target.value)
+    //     console.log(event.target.value);
+    // }
+    const handleChange=(event)=>{
+        if(event.target.id === "title"){
+            setTempTitle(event.target.value)
+        }
+        else{
+            setTempTask(event.target.value)
+        }      
     }
     const name = "Todo List"
     return(
         <div>
             <h1>Welcome {name}</h1>
-            <h4>Todays Task: {title} , {task}</h4>
-            <Button variant="outlined" onClick = {()=>handleClick("Check the Code")}>Start the Counter</Button>
+              
+            <TextField id="title" label="Title" variant="standard" onChange={handleChange}  />
+            <TextField fullWidth id="task" label="Task" variant="standard" onChange={handleChange} />
+            <Button variant="outlined" onClick = {handleClick}>Submit</Button>
+            {todoMap.forEach(ele =>{
+                console.log(ele);
+                
+            })}
+                      
         </div>
     )
 }
