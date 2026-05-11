@@ -46,4 +46,41 @@ Component Life cycle and basic building blocks of SPA Framework
         npm install typescript @types/react @types/react-dom -D
         create the folder and add the code
         
+# Component in React:-
+- smallest unit of the code
+- reusable and should be able to create pages when we combine it 
+
+# Add the Styling
+- Material Ui can be used to Styling the application
+- install
+    npm install @mui/material @emotion/react @emotion/styled
+    npm install @mui/icons-material
         
+# creating React App
+Step 1: install Vite
+ - npm install -g create-vite
+Step 2: Create the boilerplate
+ - create-vite TodoList --template react
+Step 3: Add Material UI
+  - npm install @mui/material @emotion/react @emotion/styled
+  - npm install @mui/icons-material
+Step 4: Add the UI components
+
+# Virtual DOM
+- Dom Created by React to ensure the fast rendring of the UI
+
+# Props:-
+- Passing of The data from parent to child element
+
+# Event Handling
+- if you are using onClick method the function should dose not have the Paranthisis
+Ex
+  <Button variant="outlined" onClick = {handleClick}>Start the Counter</Button>
+- if you want to pass the params then the function call should be callable
+  <Button variant="outlined" onClick = {()=>handleClick("Check the Code")}>Start the Counter</Button>
+
+# useState Hook
+- use the mantain the current state of a component;
+
+
+
