@@ -10,37 +10,30 @@ function Body(){
     const[temptitle,setTempTitle] = useState(" ")
     // const [task,setTask] = useState(" ")
     const [tempTask,setTempTask] = useState(" ")
-    const[todoMap,setTodoMap] = useState(new Map())
+    const[todoMap,setTodoMap] = useState(new Map());
     const[todo,setTodo]=useState({
         title:"",
         task:""
     })
     
     const handleClick=(event)=>{
-        const myMap =  new Map()
-        setTodo({
+        const mydata = {
             title:temptitle,
             task:tempTask
-        })
-        setTodoMap(todoMap.size+1,todo)
+            }
+        let myMap = new Map();// one object -> latest
+        myMap = todoMap;
+        myMap.set(todoMap.size+1,mydata)
+      
+        setTodoMap(myMap) // complete object with the new one
+       
+        setTempTask(" ")
+        setTempTitle(" ")
+        event.preventDefault();
         
-        console.log(todoMap);
-        
-        // console.log(myMap);
-        // const todo = new Map({tempTask,temptitle})
-        // setTodoMap(todo)
-        // setTempTask("")
-        // setTempTitle("")
         
     }
-    // const handleChangeTitle=(event)=>{
-    //     console.log(event.target.value);
-    //     setTempTitle(event.target.value)
-    // }
-    // const handleChangeTask=(event)=>{
-    //     setTempTask(event.target.value)
-    //     console.log(event.target.value);
-    // }
+   
     const handleChange=(event)=>{
         if(event.target.id === "title"){
             setTempTitle(event.target.value)
@@ -48,19 +41,22 @@ function Body(){
         else{
             setTempTask(event.target.value)
         }      
+        event.preventDefault();
     }
     const name = "Todo List"
     return(
         <div>
             <h1>Welcome {name}</h1>
               
-            <TextField id="title" label="Title" variant="standard" onChange={handleChange}  />
-            <TextField fullWidth id="task" label="Task" variant="standard" onChange={handleChange} />
+            <TextField id="title" label="Title" variant="standard" value = {temptitle} onChange={handleChange}  />
+            <TextField id="task" label="Task" variant="standard" value={tempTask} onChange={handleChange} />
             <Button variant="outlined" onClick = {handleClick}>Submit</Button>
-            {todoMap.forEach(ele =>{
-                console.log(ele);
-                
-            })}
+            {[...todoMap.entries()].map(([key,value])=>(
+                <div>
+                    <p>{value.title}</p>
+                    <p>{value.task}</p>
+                </div>
+            ))}
                       
         </div>
     )
