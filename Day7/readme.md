@@ -3,19 +3,7 @@
 create-react-app (React Project generation and Build Tool)
 2. React Components (Class, Functional), Properties, Event Handling
 3. React State, Controlled Components
-4. Using refs (Uncontrolled Components)
-5. PropTypes
-6. Component Life Cycle
-7. CSS Styling, Bootstrap in React
-8. Composable Components (Multiple Components)
-React application interfacing with backend server for data (json-server)
-9. React Router
-10. Routing Transition Concepts (Transition into and Transition from)
-11. Higher Order Components, Render Props
-12. Form handling using Formik, Yup
-13. Flux Pattern (Action, Dispatcher, Stores)
-Dependancy Injection
-Component Life cycle and basic building blocks of SPA Framework
+
 
 # what is React 
 - Open Source
