@@ -7,6 +7,7 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
+import { Link } from 'react-router-dom';
 
 export default function Header() {
  
@@ -26,7 +27,10 @@ export default function Header() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-             Demo App
+           <nav>
+                <Link to ='/'>Home</Link>
+                <Link to='/addProduct'>AddProduct</Link>
+            </nav>
           </Typography>
         </Toolbar>
       </AppBar>

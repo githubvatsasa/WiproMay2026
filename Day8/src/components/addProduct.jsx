@@ -2,18 +2,19 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import Box from '@mui/material/Box';
+import { Card,CardContent, Typography } from '@mui/material';
 function addProduct() {
     useEffect(() =>{
-        console.log("Mounting");
-        return () => {
-            console.log("Unmounting");
-        }
-        
-    })
+        fetch('http://localhost:3000/products')
+        .then((res) => res.json())
+        .then((data) => setProdArray(data))
+        },[])
     const [p_id,setPid] = useState(" ");
     const [p_name,setPName] = useState(" ");
     const [p_price,setPPrice] = useState(0);
     const [products,setProducts] = useState(new Map());
+    const [prodArray,setProdArray] = useState([]);
     const handleSubmit =() => {
         // Created a local Map (Temp. Map)
         let tempMap = new Map();
@@ -23,6 +24,17 @@ function addProduct() {
         tempMap.set(p_id,{ProductName:p_name,ProductPrice:p_price});
         // remove old data and added new data on the same object of the orignal map
         setProducts(tempMap);
+        fetch('http://localhost:3000/products',{
+            method:'POST',
+            headers:{
+                'Content-Type':'application/json'
+            },
+            body:JSON.stringify({
+                id:p_id,
+                pName:p_name,
+                pPrice:p_price
+            })
+        })
         // cleaning the form
         setPid(" ");
         setPName(" ");
@@ -62,13 +74,32 @@ function addProduct() {
             
            <Button variant="outlined" onClick = {handleSubmit}>Submit</Button>
             <br/><br/>
-            {[...products.entries()].map(([key, value])=>(
+            {/* {[...prod.entries()].map(([key, value])=>(
                 <div>
                     <h1>{key}</h1>
                     <h1>{value.ProductName}</h1>
                     <h1>{value.ProductPrice}</h1>
                 </div>
-            ))}
+            ))} */}
+            <Box sx={{ display: 'flex',gap:2, flexWrap: 'wrap', justifyContent: 'center' ,padding:3}}>
+            
+            {
+                prodArray.map((ele) =>(
+                    <Card key = {ele.id} sx={{ width: 250,boxShadow:3 }}>
+                        <CardContent>
+                              <Typography variant = 'h5'>Product Name :{ele.pName}</Typography>
+                        </CardContent>
+                        <CardContent>
+                            <Typography variant = 'body'>ID:{ele.id}</Typography>
+                        </CardContent>
+                        
+                        <CardContent>  
+                            <Typography variant = 'body'> Price :{ele.pPrice}</Typography></CardContent>
+                    </Card>
+                ))
+            
+            }
+            </Box>
            </div>
   )
 }

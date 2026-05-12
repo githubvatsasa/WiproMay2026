@@ -24,4 +24,21 @@ Component Life cycle and basic building blocks of SPA Framework
     - in class componets :- componentWillUnmount()
     - in functional componets :- useEffect() -> return()
 
+# Fetch Data from JSON(addProduct)
+    - Same as did in Js just need to add the fetch in useEffect.
+
+# routers(Login Page):-
+  - install routers using 
+      npm install react-router-dom
+  - add BrowserRouter in main.jsx
+     import { BrowserRouter } from 'react-router-dom'
+ - add Route and routes in my app.js
+ - add Link in header
+ - use navigate to load the route -> useNavigate hook
+# Form validation(Login Page)
+  - create validate method
+  - put the logic 
+  - create an array of errors
+  - add Error and helptext in UI textboxs
+
 

@@ -1,30 +1,63 @@
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { useState } from 'react';
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
+    const navigate = useNavigate();
+    const User = {
+        id : 0,
+        username : "",
+        password : ""
+    }
+    const [users,setUsers] = useState([])
+    // loding data in useEffect
+        useEffect(() => {
+        fetch('http://localhost:3000/users')
+        .then((res) => res.json())
+        .then((data) => setUsers(data))
+        },[])
     const [username,setUserName] = useState("");
     const [password,setPassword] = useState("");
-    const [result,setResult] = useState("");
+    const [errors,setErrors] = useState({});
     
   const handleSubmit = () => {
-    console.log(username,password);
-    if(username === "admin" && password === "admin")
-        setResult("Success")
-        
+    users.forEach(element => {
+        if(element.username === username && element.password === password)
+            navigate("/addProduct")
+        })      
     setPassword("");
     setUserName("");
+  }
+  const validate = () => {
+    if(username.length<=3){
+        return {username:"UserName is not valid"}
+    }
+    else if(password.length<=3){
+        return {password:"Password is not valid"}
+    }
+    else{
+        return {}
+    }
   }
   return (
     <div>
         <br></br>
+        <h1>Login</h1>
        
          <TextField
           required
           id="outlined-required"
           label="User Name"
           value={username}
-          onChange={(e) => setUserName(e.target.value)}
+          error = {errors.username}
+          helperText = {errors.username}
+          type="text"
+          onChange={(e) => {
+             setUserName(e.target.value); 
+             setErrors(validate());
+            }}
         />
         <br></br>
         <br></br>
@@ -34,13 +67,17 @@ function Login() {
           type="password"
           label="Password"
           value={password}
-          onChange={(e) => setPassword(e.target.value)}
+          error = {errors.password}
+          helperText = {errors.password}
+          onChange={(e) => {
+            setPassword(e.target.value);
+            setErrors(validate());
+          }}
         />     
         <br></br>
         <br></br>
         
        <Button variant="outlined" onClick = {handleSubmit}>Submit</Button>
-       <h1>{result}</h1>
     </div>
   )
 }
