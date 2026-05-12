@@ -24,7 +24,7 @@ Component Life cycle and basic building blocks of SPA Framework
     - in class componets :- componentWillUnmount()
     - in functional componets :- useEffect() -> return()
 
-# Fetch Data from JSON(addProduct)
+# Fetch Data from JSON(addProduct Page)
     - Same as did in Js just need to add the fetch in useEffect.
 
 # routers(Login Page):-
@@ -41,4 +41,5 @@ Component Life cycle and basic building blocks of SPA Framework
   - create an array of errors
   - add Error and helptext in UI textboxs
 
+# Homework :- Update and delete product.
 
